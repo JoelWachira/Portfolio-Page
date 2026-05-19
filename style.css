@@ -461,7 +461,7 @@ footer small {
         gap: 25px;
         height: auto;             
         padding: 10px 0;
-        margin: 0 12px !important; /* Equal 12px margins applied perfectly on left and right */
+        margin: 0 10px !important; /* Equal 12px margins applied perfectly on left and right */
     }
 
     #about > div:first-of-type,
