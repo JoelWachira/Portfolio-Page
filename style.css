@@ -28,7 +28,7 @@ hr {
 }
 
 /* ==========================================================================
-   2. Navigation Bar
+   2. Navigation Bar (Desktop)
    ========================================================================== */
 nav {
     position: fixed;
@@ -51,16 +51,16 @@ nav strong {
     letter-spacing: 0.5px;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
 }
 
-nav ul li {
+.nav-links li {
     margin-left: 25px;
 }
 
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
@@ -68,8 +68,13 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #007bff;
+}
+
+/* Hide mobile hamburger toggle button on desktop layout */
+.menu-toggle {
+    display: none;
 }
 
 /* ==========================================================================
@@ -85,7 +90,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 0 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269可靠M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     border-radius: 20px; 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -275,7 +280,7 @@ iframe{
    ========================================================================== */
 footer {
     background-color: hsla(244, 75%, 16%, 0.9);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     color: #ffffff;
     text-align: center;
     padding: 60px 5% 30px 5%;
@@ -340,7 +345,7 @@ footer small {
         overflow-x: hidden !important;
     }
 
-    /* Reset core layout properties edge-to-edge on mobile */
+    /* Reset core properties edge-to-edge on mobile screens */
     * {
         margin: 0;
         max-width: 100% !important; 
@@ -350,71 +355,75 @@ footer small {
         padding-top: 60px;        
     }
 
-    /* --- Hamburger Menu Navigation Architecture (Mobile Only) --- */
+    /* --- Functional JavaScript Navigation Layout (Mobile) --- */
     nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0 20px;
-        flex-direction: row;   
-        height: 60px;             
+        height: 60px;
+        background-color: #ffffff;
         width: 100% !important;
         left: 0;
-        justify-content: space-between;
     }
 
     nav strong {
         font-size: 1.25rem;        
     }
     
-    /* Converts existing link list into a clean three-line icon grid layout */
-    nav ul {
-        display: flex;            
+    /* Reveal and style the 3-line hamburger layout */
+    .menu-toggle {
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
-        width: 24px !important;
+        width: 24px;
         height: 18px;
-        padding: 0;
-        margin: 0;
         cursor: pointer;
-        position: relative;
     }
 
-    /* Top Line */
-    nav ul::before {
-        content: '';
+    .menu-toggle span {
+        width: 100%;
+        height: 2px;
+        background-color: #333;
         display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #333;
     }
 
-    /* Middle Line */
-    nav ul li:first-of-type {
-        display: block !important;
+    /* Hidden Drawer Links Container */
+    .nav-links {
+        display: flex;            
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: -100%; /* Hidden off-screen to the left by default */
         width: 100%;
-        height: 2px;
-        background-color: #333;
-        margin: 0;
-        padding: 0;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        padding: 20px 0;
     }
 
-    /* Bottom Line */
-    nav ul::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #333;
+    /* Activated State via JavaScript Class Toggle */
+    .nav-links.active {
+        left: 0; /* Smoothly slides out into standard view position */
     }
 
-    /* Hide text contents and other blank list items so only the menu lines display */
-    nav ul li a, 
-    nav ul li:not(:first-of-type) {
-        display: none !important;
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block !important;       
+        font-size: 1.1rem;
+        color: #333;
     }
     /* ------------------------------------------------------------- */
 
+    /* Increased mobile height and an explicit separation layout boundary */
     header {
         height: 85vh !important;  
-        margin-bottom: 100px !important; 
+        margin-bottom: 100px !important; /* Safety gap before About Me */
         padding: 50px 20px;       
         border-radius: 0;  
         width: 100% !important;       
@@ -446,13 +455,13 @@ footer small {
         margin-bottom: 25px;
     }
 
-    /* --- Added Small Margin for Mobile About Me Section --- */
+    /* Balanced Left and Right Margins for Mobile About Me Section */
     #about {
         flex-direction: column;
         gap: 25px;
         height: auto;             
         padding: 10px 0;
-        margin: 0 12px !important; /* Inserts safety side padding margin rules */
+        margin: 0 12px !important; /* Equal 12px margins applied perfectly on left and right */
     }
 
     #about > div:first-of-type,
@@ -465,7 +474,7 @@ footer small {
         font-size: 1rem;       
     }
 
-    /* --- Advanced Iframe Content Compression (Height Adjusted For Footer View) --- */
+    /* Advanced Iframe Content Compression (Height Adjusted For Footer View) */
     section:has(iframe) {
         overflow: hidden !important; 
         padding-left: 0 !important;
@@ -473,14 +482,14 @@ footer small {
     }
 
     iframe {
-        height: 105vh;            /* Increased height value to render the statements at the bottom */
+        height: 105vh;            /* Added screen height to make bottom statements completely visible */
         padding: 0px;             
         border-radius: 0px;
         width: 133.33% !important;
         max-width: 133.33% !important; 
         transform: scale(0.75);   
         transform-origin: 0 0;    
-        margin-bottom: -26vh;     /* Proportional offset calculation correction */
+        margin-bottom: -26vh;     
     }
 
     #projects div {

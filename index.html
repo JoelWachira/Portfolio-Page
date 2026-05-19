@@ -12,14 +12,20 @@
     <!-- Navigation bar -->
 
     <nav>
-        <strong>Joel Wachira</strong>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <strong>Joel Wachira</strong>
+    <!-- This div acts as the visible button -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- This is your actual menu link container -->
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
 
     <hr>
 
@@ -123,5 +129,13 @@
         <p><small>&copy; 2026 Joel Wachira. All Rights Reserved.</small></p>
     </footer>
 
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
