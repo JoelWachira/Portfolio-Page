@@ -489,8 +489,7 @@ footer small {
         max-width: 133.33% !important; 
         transform: scale(0.75);   
         transform-origin: 0 0;    
-        margin-bottom: -26vh;  
-        font-size: 0.5rem;   
+        margin-bottom: -26vh;    
     }
 
     #projects div {

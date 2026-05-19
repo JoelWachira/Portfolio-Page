@@ -82,5 +82,9 @@
       width: 200px;
       height: 200px;
     }
+
+    .description p {
+    font-size: 0.9rem;
+    }
   }
   
