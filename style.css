@@ -335,25 +335,42 @@ footer small {
    8. Media Queries (Enhanced Mobile View)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Prevent overall horizontal scrolling issues from '*' margins */
     body {
-        padding-top: 60px;
+        padding-top: 90px;        /* Increased slightly to give space to the new two-tier mobile header */
         overflow-x: hidden;
     }
 
+    /* --- Restored Navigation Bar for Mobile --- */
     nav {
-        padding: 0 5%;
-        justify-content: center; /* Centers title on mobile since links are hidden */
+        padding: 8px 4%;
+        flex-direction: column;   /* Stacks the logo title above links neatly */
+        height: auto;             /* Removes desktop 60px height limitation */
+        gap: 6px;
+    }
+
+    nav strong {
+        font-size: 1.2rem;        /* Snug layout sizing for the logo title */
     }
     
     nav ul {
-        display: none; 
+        display: flex;            /* RESTORED: Brings links back to mobile view */
+        justify-content: center;
+        width: 100%;
+        padding: 4px 0;
+    }
+
+    nav ul li {
+        margin: 0 10px;           /* Replaces harsh single side desktop margins with tight uniform gaps */
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;       /* Keeps nav targets small and clean in a single row */
     }
 
     header {
-        height: auto;             /* Changes from fixed 100vh to fit content smoothly */
-        padding: 80px 24px;       /* Adds explicit spacing top/bottom */
-        border-radius: 0;         /* Flush design looks better on mobile edges */
+        height: auto;             
+        padding: 60px 24px;       
+        border-radius: 0;         
     }
 
     header h1 {
@@ -367,13 +384,13 @@ footer small {
     }
 
     header a {
-        width: 100%;              /* Easy to tap full-width button on mobile */
+        width: 100%;              
         max-width: 280px;
         text-align: center;
     }
 
     section {
-        padding: 50px 5%;         /* Better spacing for compact viewport screen boundaries */
+        padding: 40px 4%;         
     }
 
     section h2 {
@@ -384,8 +401,8 @@ footer small {
     #about {
         flex-direction: column;
         gap: 30px;
-        height: auto;             /* ESSENTIAL: Breaks 95vh layout constraint to avoid overlaying content */
-        padding: 20px 0;
+        height: auto;             
+        padding: 10px 0;
     }
 
     #about > div:first-of-type,
@@ -395,49 +412,44 @@ footer small {
     }
     
     #about p {
-        font-size: 1.05rem;       /* Scaled down long copy layout sizes slightly */
+        font-size: 1.05rem;       
     }
 
-    /* --- Enhanced Iframe Optimization for Mobile --- */
+    /* --- Advanced Iframe Content Compression for Mobile --- */
     iframe {
-        height: 85vh;             /* Increased vh to show the layout in full */
-        padding: 8px;             /* Reduced padding inside section container boundary */
+        height: 85vh;             
+        padding: 0px;             /* Cleared to maximize internal real estate space */
+        
+        /* The Secret Sauce: Scale everything down globally inside the iframe view */
+        width: 133.33% !important;/* Expands width past boundary to keep layout proportion */
+        transform: scale(0.75);   /* Shrinks visual frame down to 75%, making text/images 25% smaller to fit */
+        transform-origin: 0 0;    /* Anchors scaling transformation to top left */
+        margin-bottom: -21vh;     /* Pulls up following elements to erase empty space left behind by scaling */
     }
-
-    /* Force font scaling and max-sizing rules targeting elements inside the embed if applicable */
-    iframe html, iframe body {
-        font-size: 8px !important; 
-    }
-
-    iframe img, iframe video {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-    /* ----------------------------------------------- */
 
     #projects div {
-        padding: 20px;            /* Gives copy slightly more area inside containers */
+        padding: 20px;            
     }
 
     /* --- Half-Size Mobile Footer Optimization --- */
     footer {
-        padding: 30px 5% 15px 5%; /* Cut total padding down substantially */
+        padding: 30px 5% 15px 5%; 
     }
 
     footer h2 {
-        font-size: 1.4rem;        /* Slightly scaled down header */
+        font-size: 1.4rem;        
         margin-bottom: 8px;
     }
 
     footer p {
-        font-size: 0.95rem;       /* Made paragraph text tighter */
-        margin-bottom: 15px;      /* Halved original desktop bottom margin */
+        font-size: 0.95rem;       
+        margin-bottom: 15px;      
     }
 
     footer ul {
-        flex-direction: column;   /* Keep buttons stacked neatly for thumbs */
-        gap: 8px;                 /* Squeezed spacing between buttons */
-        margin-bottom: 20px;      /* Halved original space above the legal line */
+        flex-direction: column;   
+        gap: 8px;                 
+        margin-bottom: 20px;      
     }
 
     footer ul li {
@@ -447,11 +459,10 @@ footer small {
     footer ul li a {
         display: block;
         width: 100%;
-        padding: 8px 0;           /* Balanced padding value for ideal target hit volume */
+        padding: 8px 0;           
     }
 
     footer small {
-        padding-top: 15px;        /* Tighter divider layout block */
+        padding-top: 15px;        
     }
-    /* -------------------------------------------- */
 }
