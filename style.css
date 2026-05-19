@@ -461,13 +461,12 @@ footer small {
         gap: 25px;
         height: auto;             
         padding: 6px 2px 6px 0px;
-        padding-right: 3px;
         margin: 0 12px !important; /* Equal 12px margins applied perfectly on left and right */
     }
 
     #about > div:first-of-type,
     #about > div:last-of-type {
-        width: 95% !important;
+        width: 100% !important;
         min-width: 100% !important;
     }
     
