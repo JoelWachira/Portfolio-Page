@@ -471,7 +471,7 @@ footer small {
     }
     
     #about p {
-        font-size: 10%;       
+        font-size: 0.9rem;       
     }
 
     /* Advanced Iframe Content Compression (Height Adjusted For Footer View) */
@@ -489,7 +489,8 @@ footer small {
         max-width: 133.33% !important; 
         transform: scale(0.75);   
         transform-origin: 0 0;    
-        margin-bottom: -26vh;     
+        margin-bottom: -26vh;  
+        font-size: 0.85rem;   
     }
 
     #projects div {
