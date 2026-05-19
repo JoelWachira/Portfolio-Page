@@ -460,7 +460,7 @@ footer small {
         flex-direction: column;
         gap: 25px;
         height: auto;             
-        padding: 6px 10px 0px 0px;
+        padding: 6px 20px 0px 0px;
         margin: 0 12px !important; /* Equal 12px margins applied perfectly on left and right */
     }
 
