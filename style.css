@@ -406,7 +406,7 @@ footer small {
 
     /* Force font scaling and max-sizing rules targeting elements inside the embed if applicable */
     iframe html, iframe body {
-        font-size: 14px !important; 
+        font-size: 8px !important; 
     }
 
     iframe img, iframe video {
