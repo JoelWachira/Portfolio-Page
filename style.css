@@ -276,7 +276,7 @@ iframe{
    ========================================================================== */
 footer {
     background-color: hsla(244, 75%, 16%, 0.9);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269定位'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     color: #ffffff;
     text-align: center;
     padding: 60px 5% 30px 5%;
@@ -398,26 +398,46 @@ footer small {
         font-size: 1.05rem;       /* Scaled down long copy layout sizes slightly */
     }
 
+    /* --- Enhanced Iframe Optimization for Mobile --- */
     iframe {
-        height: 50vh;             /* Reduces overly tall maps/frames on small viewports */
-        padding: 5px;
+        height: 85vh;             /* Increased vh to show the layout in full */
+        padding: 8px;             /* Reduced padding inside section container boundary */
     }
+
+    /* Force font scaling and max-sizing rules targeting elements inside the embed if applicable */
+    iframe html, iframe body {
+        font-size: 14px !important; 
+    }
+
+    iframe img, iframe video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    /* ----------------------------------------------- */
 
     #projects div {
         padding: 20px;            /* Gives copy slightly more area inside containers */
     }
 
+    /* --- Half-Size Mobile Footer Optimization --- */
     footer {
-        padding: 40px 5% 20px 5%;
+        padding: 30px 5% 15px 5%; /* Cut total padding down substantially */
     }
 
     footer h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;        /* Slightly scaled down header */
+        margin-bottom: 8px;
+    }
+
+    footer p {
+        font-size: 0.95rem;       /* Made paragraph text tighter */
+        margin-bottom: 15px;      /* Halved original desktop bottom margin */
     }
 
     footer ul {
-        flex-direction: column;   /* Stacks buttons for easy scroll-down action targets */
-        gap: 12px;
+        flex-direction: column;   /* Keep buttons stacked neatly for thumbs */
+        gap: 8px;                 /* Squeezed spacing between buttons */
+        margin-bottom: 20px;      /* Halved original space above the legal line */
     }
 
     footer ul li {
@@ -427,6 +447,11 @@ footer small {
     footer ul li a {
         display: block;
         width: 100%;
-        padding: 12px 0;          /* Thumb-friendly hit area size */
+        padding: 8px 0;           /* Balanced padding value for ideal target hit volume */
     }
+
+    footer small {
+        padding-top: 15px;        /* Tighter divider layout block */
+    }
+    /* -------------------------------------------- */
 }
