@@ -460,7 +460,7 @@ footer small {
         flex-direction: column;
         gap: 25px;
         height: auto;             
-        padding: 6px 2px 6px 0px;
+        padding: 6px 2px 0px 0px;
         margin: 0 12px !important; /* Equal 12px margins applied perfectly on left and right */
     }
 
@@ -471,7 +471,7 @@ footer small {
     }
     
     #about p {
-        font-size: 0.6rem;       
+        font-size: 0.9rem;       
     }
 
     /* Advanced Iframe Content Compression (Height Adjusted For Footer View) */
