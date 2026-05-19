@@ -391,7 +391,7 @@ footer small {
     /* Hidden Drawer Links Container */
     .nav-links {
         display: flex;            
-        flex-direction: row;
+        flex-direction: column;
         position: absolute;
         top: 60px;
         left: -100%; /* Hidden off-screen to the left by default */
