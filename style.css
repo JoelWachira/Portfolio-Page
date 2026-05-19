@@ -467,7 +467,7 @@ footer small {
 
     #about > div:first-of-type,
     #about > div:last-of-type {
-        width: 100% !important;
+        width: 95% !important;
         min-width: 100% !important;
     }
     
